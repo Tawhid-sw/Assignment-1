@@ -1,0 +1,76 @@
+/* === Azeret Font === */
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+* , 
+*::after , 
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Bg-color: #f5f5f5;
+    --secondary-color: #000;
+    --Text-black: #000;
+    --Text-white: #fff;
+    --font-Size-defult : 1.25rem
+
+}
+a , li {
+    text-decoration: none;
+    color: var(--Text-black);
+}
+
+body{
+    background-color: var(--Bg-color);
+    width: 100%;
+}
+
+/* == navbar == */
+header > nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+}
+header > nav > h1.name{
+    font-family: Azeret Mono;
+    font-weight: 800;
+    font-size: var(--font-Size-defult);
+}
+header > nav > button.dn-resume{
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: 1.5px solid #3d424d;
+    padding: 0.8rem 1rem;
+    font-family: Azeret Mono;
+    color: #3d424d;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    transition: 0.30s linear;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+header > nav > button.dn-resume:hover{
+    background-color: #3d424d;
+    color: var(--Text-white);
+}
+header > nav > button.dn-resume::after{
+    content: "";
+    position: absolute;
+    width: 0.88em;
+    height: 4em;
+    background-color: #4d5462;
+    left: -1.5rem;
+    top: -1em;
+    z-index: -1;
+    transform: rotate(16deg);
+    transition: 0.10s;
+}
+header > nav > button.dn-resume:hover::after{
+    left: 11rem;
+    transition: 0.50s linear;
+}
