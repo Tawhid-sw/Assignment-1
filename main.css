@@ -12,7 +12,9 @@
     --secondary-color: #000;
     --Text-black: #000;
     --Text-white: #fff;
-    --font-Size-defult : 1.25rem
+    --font-Size-small : 1.33vw;
+    --font-Size-defult : 1.25rem;
+    --font-Size-big : 2.5rem;
 
 }
 a , li {
@@ -26,6 +28,10 @@ body{
 }
 
 /* == navbar == */
+header {
+    display: block;
+    width: 100%;
+}
 header > nav {
     display: flex;
     align-items: center;
@@ -45,9 +51,10 @@ header > nav > button.dn-resume{
     border: 1.5px solid #3d424d;
     padding: 0.8rem 1rem;
     font-family: Azeret Mono;
+    font-size: 1rem;
     color: #3d424d;
     cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     outline: none;
     transition: 0.30s linear;
     position: relative;
@@ -73,4 +80,51 @@ header > nav > button.dn-resume::after{
 header > nav > button.dn-resume:hover::after{
     left: 11rem;
     transition: 0.50s linear;
+}
+header .mn-Bg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width: 100%;
+    line-height: 1.5;
+    padding: 2rem;
+    background-image: url(./assets/Hero-bg.png);
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+}
+header .mn-Bg > img.IconPng{
+    width: 17.51dvw;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+}
+header .mn-Bg h1.Headline {
+    font-size: 3vw;
+    font-family: Azeret Mono;
+    text-align: center;
+    font-weight: 800;
+    color: var(--Text-black);
+}
+p.text-2nd {
+    text-align: center;
+    font-family: 'Azeret Mono';
+    letter-spacing: 1px;
+    font-size: var(--font-Size-small);
+    font-weight: 400;
+    color : var(--Text-black);
+    opacity: 0.7;
+    margin: 2% 0;
+}
+a.contact {
+    padding: 1% 1.5%;
+    border-radius: 0.4rem;
+    outline: none;
+    border: none;
+    font-family: 'Azeret Mono';
+    background-color: #0d1321;
+    color: var(--Text-white);
+    font-weight: 500;
+    font-size: var(--font-Size-small);
+    cursor: pointer;
 }
