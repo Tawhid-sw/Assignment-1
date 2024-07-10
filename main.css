@@ -15,6 +15,7 @@
     --secondary-color: #000;
     --Text-black: #000;
     --Text-white: #fff;
+    --Text-mute: #9b8f8f;
     --font-Size-Extra-small : 1vw;
     --font-Size-small : 1.33vw;
     --font-Size-defult : 1.25rem;
@@ -145,11 +146,8 @@ main{
 main h1.title-heading{
     font-size: var(--font-Size-medeum);
     font-weight: 800;
-    margin: 3% 0;
-    margin-bottom: 1rem;
-}
-main h1.title-heading:nth-child(1){
     margin: 5% 0;
+    margin-bottom: 1rem;
 }
 main p.title-2nd{
     font-size: var(--font-Size-Extra-small);
@@ -232,4 +230,89 @@ section:nth-child(2) button:hover {
     color: var(--Text-black);
     border: 2px solid var(--color-yellow);
     box-shadow: 0px 0px 2rem var(--color-yellow), 0px 0px 3rem var(--color-yellow);
+}
+main .group-second {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: Azeret Mono;
+    margin-top: 5%;
+    gap: 3vw;
+}
+.group-second .cards {
+    width: 31%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.5rem;
+    margin-bottom: 3%;
+}
+.group-second .cards > img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: contain;
+    filter: blur(8px) brightness(0.8);
+}
+.group-second .cards:nth-child(1){
+    background-color: #ff621e;
+}
+.group-second .cards:nth-child(2){
+    background-color: #0065f4;
+}
+.group-second .cards:nth-child(3){
+    background-color: #ccb200;
+}
+.group-second .cards .cards_card{
+    line-height: 2;
+    width: 100%;
+    padding: 5%;
+    position: relative;
+    background-color: rgb(255 255 255 / 20%);
+    background-image: linear-gradient(45deg, black, transparent);
+}
+.group-second .cards .cards_card > img{
+    display: block;
+    width: 4vw;
+    max-width: 100%;
+}
+.group-second .cards .cards_card h2{
+    font-weight: bolder;
+    font-size: var(--font-Size-defult);
+    color: var(--Text-white);
+    margin: 2% 0;
+}
+.group-second .cards .cards_card p{
+    font-size: var(--font-Size-Extra-smallsmall);
+    opacity: 0.9;
+    color: var(--Text-white);
+}
+.group-second .cards .cards_card a{
+    transition: 0.5s ;
+    color: var(--Text-white);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0;
+}
+.group-second .cards .cards_card a:hover{
+    color: var(--Text-mute);
+    letter-spacing: 2px;
+}
+.group-second .cards .cards_card a::after{
+    content: "";
+    position: absolute;
+    padding: 0.5px;
+    background-color: var(--Text-white);
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    transition: 0.2s ;
+}
+.group-second .cards .cards_card a:hover::after{
+    bottom: 8px;
+    background-color: var(--Text-mute);
 }
