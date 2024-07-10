@@ -9,11 +9,16 @@
 }
 :root{
     --Bg-color: #f5f5f5;
+    --color-primary : #6d6dde;
+    --color-secondary: #d85959;
+    --color-yellow : #f6f661;
     --secondary-color: #000;
     --Text-black: #000;
     --Text-white: #fff;
+    --font-Size-Extra-small : 1vw;
     --font-Size-small : 1.33vw;
     --font-Size-defult : 1.25rem;
+    --font-Size-medeum : 2.3vw;
     --font-Size-big : 2.5rem;
 
 }
@@ -78,7 +83,7 @@ header > nav > button.dn-resume::after{
     transition: 0.10s;
 }
 header > nav > button.dn-resume:hover::after{
-    left: 11rem;
+    left: 13rem;
     transition: 0.50s linear;
 }
 header .mn-Bg{
@@ -108,7 +113,7 @@ header .mn-Bg h1.Headline {
 }
 p.text-2nd {
     text-align: center;
-    font-family: 'Azeret Mono';
+    font-family: Azeret Mono;
     letter-spacing: 1px;
     font-size: var(--font-Size-small);
     font-weight: 400;
@@ -127,4 +132,100 @@ a.contact {
     font-weight: 500;
     font-size: var(--font-Size-small);
     cursor: pointer;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 5%;
+    font-family: Azeret Mono;
+}
+main .title-heading{
+    font-size: var(--font-Size-medeum);
+    font-weight: 800;
+    margin: 5% 0;
+    margin-bottom: 1rem;
+}
+main p.title-2nd{
+    font-size: var(--font-Size-Extra-small);
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0;
+    opacity: 0.7;
+    line-height: 1.5;
+}
+main .info {
+    width: 100%;
+    margin-top: 8%;
+    text-align: center;
+}
+.info .info_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10%;
+    margin-bottom: 10%;
+}
+.info .info_info section{
+    width: 33vw;
+    max-width: 100%;
+    text-align: left;
+    line-height: 1.55;
+}
+section > h2{
+    font-size: 1.8vw;
+    color: #535761;
+}
+section p{
+    font-size: var(--font-Size-Extra-small);
+    font-weight: 400;
+    opacity: 0.7;
+    margin: 2rem 0;
+}
+section button{
+    padding: 2% 6%;
+    background: transparent;
+    font-family: Azeret Mono;
+    border: 2px solid #535761;
+    color: #535761;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: var(--font-Size-Extra-small);
+    transition: .30s ease-in;
+}
+section button:hover {
+    background-color: var(--color-primary);
+    color: var(--Text-white);
+    border: 2px solid var(--color-primary);
+    box-shadow: 0px 0px 2rem var(--color-primary), 0px 0px 3rem var(--color-primary);
+}
+
+.info .info_info img{
+    width: 20vw;
+    max-width: 100%;
+}
+.info .info_info:nth-child(2){
+    gap: 4%;
+}
+.info .info_info:nth-child(2) section{
+    width: 40vw;
+}
+section:nth-child(2) button{
+    padding: 2% 6%;
+}
+section:nth-child(2) button:hover {
+    background-color: var(--color-secondary);
+    color: var(--Text-white);
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0px 0px 2rem var(--color-secondary), 0px 0px 3rem var(--color-secondary);
+}
+.info .info_info:nth-child(3) section button:hover{
+    background-color: var(--color-yellow);
+    color: var(--Text-black);
+    border: 2px solid var(--color-yellow);
+    box-shadow: 0px 0px 2rem var(--color-yellow), 0px 0px 3rem var(--color-yellow);
 }
