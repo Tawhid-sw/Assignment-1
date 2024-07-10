@@ -290,7 +290,96 @@ main .group-second {
     opacity: 0.9;
     color: var(--Text-white);
 }
-.group-second .cards .cards_card a{
+main .group4{
+    width: 100%;
+    display: grid;
+    place-content: normal;
+    justify-content: normal;
+    align-items: center;
+}
+.group4 .g4-cards{
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 3%;
+}
+.group4 .g4-cards:nth-child(1){
+    background-color: #61dafb;
+}
+.group4 .g4-cards:nth-child(2){
+    background-color: #6cc04a;
+}
+.group4 .g4-cards:nth-child(3){
+    background-color: #264117;
+}
+.group4 .g4-cards > img{
+    position: absolute;
+    inset: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px) brightness(0.8);
+}
+.group4 .g4-cards:nth-child(1) > img{
+    animation: rotate 15s infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    } 
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.group4 .g4-cards:nth-child(2) > img{
+    animation: flot 3s ease infinite;
+}
+@keyframes flot{
+    0%{
+        top: 10px;
+    } 
+    50%{
+        top: 30px;
+    }
+    100%{
+        top: 10px;
+    }
+}
+.g4-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3%;
+    padding: 2rem;
+    position: relative;
+    color: var(--Text-white);
+    background-image: linear-gradient(45deg, black, transparent);
+    background-color: #fff0;
+}
+.g4-card > img{
+    display: block;
+    max-width: 100%;
+}
+.g4-card h2{
+    font-family: Azeret Mono;
+    font-weight: 800;
+    margin: -0.5rem 0;
+    color: var(--Text-white);
+}
+.g4-card section p{
+    margin: 1.5rem 0;
+}
+.g4-card a::after{
+    content: "";
+    position: absolute;
+    padding: 0.7px;
+    background-color: red;
+    bottom: 8px;
+    left: -108px;
+    width: 100%;
+    transition: 0.2s ;
+}
+.g4-card a , .group-second .cards .cards_card a{
     transition: 0.5s ;
     color: var(--Text-white);
     cursor: pointer;
@@ -298,11 +387,11 @@ main .group-second {
     overflow: hidden;
     letter-spacing: 0;
 }
-.group-second .cards .cards_card a:hover{
+.g4-card a:hover , .group-second .cards .cards_card a:hover{
     color: var(--Text-mute);
     letter-spacing: 2px;
 }
-.group-second .cards .cards_card a::after{
+.g4-card a::after , .group-second .cards .cards_card a::after{
     content: "";
     position: absolute;
     padding: 0.5px;
@@ -312,7 +401,7 @@ main .group-second {
     width: 100%;
     transition: 0.2s ;
 }
-.group-second .cards .cards_card a:hover::after{
+.g4-card a:hover::after , .group-second .cards .cards_card a:hover::after{
     bottom: 8px;
     background-color: var(--Text-mute);
 }
