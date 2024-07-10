@@ -142,11 +142,14 @@ main{
     padding: 5%;
     font-family: Azeret Mono;
 }
-main .title-heading{
+main h1.title-heading{
     font-size: var(--font-Size-medeum);
     font-weight: 800;
-    margin: 5% 0;
+    margin: 3% 0;
     margin-bottom: 1rem;
+}
+main h1.title-heading:nth-child(1){
+    margin: 5% 0;
 }
 main p.title-2nd{
     font-size: var(--font-Size-Extra-small);
@@ -159,6 +162,7 @@ main p.title-2nd{
 main .info {
     width: 100%;
     margin-top: 8%;
+    margin-bottom: -1rem;
     text-align: center;
 }
 .info .info_info {
