@@ -20,7 +20,7 @@
     --font-Size-small : 1.33vw;
     --font-Size-defult : 1.25rem;
     --font-Size-medeum : 2.3vw;
-    --font-Size-big : 2.5rem;
+    --font-Size-big : 2.5vw;
 
 }
 a , li {
@@ -358,6 +358,7 @@ main .group4{
 }
 .g4-card > img{
     display: block;
+    width: 8vw;
     max-width: 100%;
 }
 .g4-card h2{
@@ -404,4 +405,90 @@ main .group4{
 .g4-card a:hover::after , .group-second .cards .cards_card a:hover::after{
     bottom: 8px;
     background-color: var(--Text-mute);
+}
+/* === footer === */
+footer#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 5%;
+}
+footer .support{
+    width: 100%;
+    text-align: center;
+    padding: 2% 0;
+    line-height: 2;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-image: url(/assets/handshake.jpg), linear-gradient(0deg, #00000095, #00000095);
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-size: 100%;
+    color: var(--Text-white);
+    font-family: Azeret Mono;
+    margin-bottom: 2rem;
+}
+.support > h1{
+    font-size: var(--font-Size-big);
+}
+.support p{
+    opacity: 0.7;
+    font-size: var(--font-Size-Extra-small);
+    margin: 0.5rem 0;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-direction: row;
+    margin: 1rem 0;
+}
+input#feedback {
+    border: none;
+    outline: none;
+    width: 40%;
+    padding: 1% 2%;
+    font-weight: 300;
+    font-size: var(--font-Size-small);
+    font-family: Azeret Mono;
+    border-radius: 0.5rem;
+    color: var(--Text-black);
+}
+input#feedback::placeholder{
+    color: #9ea0a6;
+}
+form button{
+    padding: 1% 2.5%;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    font-family: Azeret Mono;
+    cursor: pointer;
+    font-size: var(--font-Size-small);
+    font-weight: 400;
+}
+.end{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.end h1{
+    font-family: Azeret Mono;
+    font-weight: 700;
+    font-size: var(--font-Size-small);
+}
+.end_img{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
 }
